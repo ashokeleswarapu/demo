@@ -35,4 +35,5 @@ sleep 2
 # credentials and fetched in pipeline.
 PACKAGE_PATH=build
 #deb-s3 upload --bucket $BUCKET --access-key-id $ACCESS_KEY_ID --secret-access-key $SECRET_ACCESS_KEY --s3-region us-west-2 --arch amd64 --codename trusty --preserve-versions true $PACKAGE_PATH/*.deb
-deb-s3 upload --bucket spinnakerdemonew --arch amd64 --codename trusty --preserve-versions true $PACKAGE_PATH/*.deb
+#deb-s3 upload --bucket spinnakerdemonew --arch amd64 --codename trusty --preserve-versions true $PACKAGE_PATH/*.deb
+s3cmd put $PACKAGE_PATH/*.deb s3://spinnakerdemonew/
